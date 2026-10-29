@@ -43,7 +43,7 @@ A learning management system used by an internal operations team. I took full ow
 - Use OpenSearch for search instead of relying on MongoDB indexes (TODO(ask): was this your decision or inherited?).
 
 ## Problems I hit
-- Intermittent bugs that had been "fixed" with manual scripts. TODO(ask): pick one; root cause and how you fixed it → candidate incident note.
+- Intermittent bugs that had been "fixed" with manual scripts. Several turned out to be [[Missed Use Case]]s, not defects. For example, checkpoint exam restarts (see [[Checkpoint Exam Restart - Missed Use Case]]) and rescheduling classes for holidays.
 - Poor MongoDB search and index performance.
 - Customer support tickets about login, enrollment requests and data export. Many of these became bug fixes or features. See [[Owning a Product End-to-End]].
 - Context switching between roles.
@@ -52,4 +52,4 @@ A learning management system used by an internal operations team. I took full ow
 - TODO(ask)
 
 ## Linked concepts
-- [[Microservices Architecture]] · [[Hexagonal Architecture]] · [[Command vs Event Messages]] · [[Event-Driven Data Synchronization]] · [[Document Model]] · [[Secondary Search Index]] · [[Caching]] · [[Rate Limiting]] · [[Distributed Lock]] · [[Agent-Friendly Codebase]]
+- [[Microservices Architecture]] · [[Hexagonal Architecture]] · [[Command vs Event Messages]] · [[Event-Driven Data Synchronization]] · [[Document Model]] · [[Secondary Search Index]] · [[Caching]] · [[Rate Limiting]] · [[Distributed Lock]] · [[Agent-Friendly Codebase]] · [[Missed Use Case]] · [[Role-Based Access Control]] · [[Audit Trail]]
