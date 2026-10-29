@@ -4,16 +4,16 @@ tags: [practice, incident, product, requirements, support]
 created: 2026-10-29
 ---
 
-# Checkpoint Exam Restart: Missed Use Case
+# Checkpoint Exam Restart
 
 ## Context
 On [[LMS Platform]], inherited from another team. A recurring support issue: a student missed their checkpoint exam and then couldn't start it again. The previous team handled every occurrence by running a one-off script that reset the student's checkpoint record.
 
 ## Problem
-It looked like an intermittent bug, but the system was doing exactly what it was built to do. Nobody had designed the case "a student misses a checkpoint and needs to retake it", so every occurrence turned into a manual data fix by a developer.
+It looked like an intermittent bug, but the system was doing exactly what it was built to do. Nobody had designed the case "a student misses a checkpoint and needs to retake it", so every occurrence turned into a manual data fix by a developer: [[Toil]] caused by a [[Requirements Gap]].
 
 ## What I did
-- Suspected by instinct that it wasn't a defect but a [[Missed Use Case]].
+- Suspected by instinct that it wasn't a defect but a [[Requirements Gap]].
 - Verified with stakeholders what students actually needed, and confirmed that a student who misses a checkpoint is allowed to restart it.
 - Built a **restart checkpoint** feature:
   - Only the class's operator can trigger it ([[Role-Based Access Control]]).
@@ -30,7 +30,7 @@ It looked like an intermittent bug, but the system was doing exactly what it was
 - Confirm the business rule with stakeholders before "fixing" anything. Here the right behaviour (restart allowed) was a policy decision, not a technical one.
 - Move recurring fixes from developers to operations with proper guards: a permission check and an audit history.
 - Trust the instinct that something is a use case rather than a bug, but verify it with stakeholders before building.
-- This was not a one-off. Other recurring scripts also stood in for missing use cases, e.g. a script to reschedule classes for holidays. See [[Missed Use Case]].
+- This was not a one-off. Other recurring scripts also stood in for missing use cases, e.g. a script to reschedule classes for holidays. See [[Requirements Gap]].
 
 ## Linked concepts
-- [[Missed Use Case]] · [[Role-Based Access Control]] · [[Audit Trail]] · [[Owning a Product End-to-End]]
+- [[Requirements Gap]] · [[Toil]] · [[Role-Based Access Control]] · [[Audit Trail]] · [[Owning a Product End-to-End]]

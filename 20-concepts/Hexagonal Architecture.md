@@ -2,6 +2,8 @@
 type: concept
 tags: [concept, architecture, design]
 created: 2026-10-29
+aliases: [Ports and Adapters]
+source: "Alistair Cockburn (2005)"
 ---
 
 # Hexagonal Architecture

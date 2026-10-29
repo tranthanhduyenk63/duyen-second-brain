@@ -2,14 +2,16 @@
 type: concept
 tags: [concept, messaging, kafka, data-consistency]
 created: 2026-10-29
+aliases: [Event-Driven Data Synchronization]
+source: "Martin Fowler, What do you mean by Event-Driven? (2017)"
 ---
 
-# Event-Driven Data Synchronization
+# Event-Carried State Transfer
 
 > [!todo] Drafted by Claude: generic definition. Rewrite in your own words.
 
 ## Definition (in my words)
-Keeping a copy of another service's data up to date by consuming that service's change events (e.g. `CourseUpdated`), instead of calling the service synchronously every time the data is needed.
+Events carry the changed data itself (e.g. `CourseUpdated` with the new course fields). Consumers keep a local copy of another service's data up to date from these events, instead of calling that service synchronously each time they need the data.
 
 ## Why it matters
 - Each service can read its local copy without a network call, and it keeps working when the source service is down.
@@ -22,7 +24,7 @@ Keeping a copy of another service's data up to date by consuming that service's 
 - When the reader needs data that is strongly consistent (always current).
 
 ## Links
-- [[Command vs Event Messages]] · [[Idempotent Consumer]] · [[Outbox Pattern]]
+- [[Command Message]] and [[Event Message]] · [[Idempotent Consumer]] · [[Outbox Pattern]]
 
 ## Applied in
 - [[LMS Platform]]: services listen to "updated" events from other services and update their own data. TODO(ask): were the intermittent bugs related to this?

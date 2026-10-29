@@ -2,6 +2,7 @@
 type: concept
 tags: [concept, data, compliance, observability]
 created: 2026-10-29
+aliases: [Audit Log]
 ---
 
 # Audit Trail
@@ -25,4 +26,4 @@ A record of who changed what, when and why. It is stored alongside the data, or 
 - [[Role-Based Access Control]]
 
 ## Applied in
-- [[Checkpoint Exam Restart - Missed Use Case]]: every checkpoint restart records an update history.
+- [[Checkpoint Exam Restart]]: every checkpoint restart records an update history.

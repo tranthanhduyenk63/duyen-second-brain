@@ -22,10 +22,10 @@ A learning management system used by an internal operations team. I took full ow
 - [[Microservices Architecture]], split into layers: **web → api → services → integrations**.
 - **Web:** Next.js.
 - **Backend:** NestJS services.
-- **Messaging:** Kafka carries both commands and events (see [[Command vs Event Messages]]). It is used for:
-  - Service-to-service communication. For example, a service listens to another service's "updated" event and updates its own copy of the data ([[Event-Driven Data Synchronization]]).
+- **Messaging:** Kafka carries both commands and events (see [[Command Message]] and [[Event Message]]). It is used for:
+  - Service-to-service communication. For example, a service listens to another service's "updated" event and updates its own copy of the data ([[Event-Carried State Transfer]]).
   - Dispatching events to a data pipeline.
-- **Database:** MongoDB, inherited. The [[Document Model]] fits nested data well, but search and index performance were poor, so search moved to OpenSearch ([[Secondary Search Index]]).
+- **Database:** MongoDB, inherited. The [[Document Database]] fits nested data well, but search and index performance were poor, so search moved to OpenSearch ([[Polyglot Persistence]]).
 - **Redis:** [[Caching]], [[Rate Limiting]] and [[Distributed Lock]]s.
 - **Infrastructure:** Kubernetes, with CI/CD pipelines in Azure (TODO(ask): Azure DevOps Pipelines? AKS?).
 
@@ -43,7 +43,7 @@ A learning management system used by an internal operations team. I took full ow
 - Use OpenSearch for search instead of relying on MongoDB indexes (TODO(ask): was this your decision or inherited?).
 
 ## Problems I hit
-- Intermittent bugs that had been "fixed" with manual scripts. Several turned out to be [[Missed Use Case]]s, not defects. For example, checkpoint exam restarts (see [[Checkpoint Exam Restart - Missed Use Case]]) and rescheduling classes for holidays.
+- Intermittent bugs that had been "fixed" with manual scripts. Several turned out to be [[Requirements Gap]]s, not defects. For example, checkpoint exam restarts (see [[Checkpoint Exam Restart]]) and rescheduling classes for holidays.
 - Poor MongoDB search and index performance.
 - Customer support tickets about login, enrollment requests and data export. Many of these became bug fixes or features. See [[Owning a Product End-to-End]].
 - Context switching between roles.
@@ -52,4 +52,4 @@ A learning management system used by an internal operations team. I took full ow
 - TODO(ask)
 
 ## Linked concepts
-- [[Microservices Architecture]] · [[Hexagonal Architecture]] · [[Command vs Event Messages]] · [[Event-Driven Data Synchronization]] · [[Document Model]] · [[Secondary Search Index]] · [[Caching]] · [[Rate Limiting]] · [[Distributed Lock]] · [[Agent-Friendly Codebase]] · [[Missed Use Case]] · [[Role-Based Access Control]] · [[Audit Trail]]
+- [[Microservices Architecture]] · [[Hexagonal Architecture]] · [[Command Message]] and [[Event Message]] · [[Event-Carried State Transfer]] · [[Document Database]] · [[Polyglot Persistence]] · [[Caching]] · [[Rate Limiting]] · [[Distributed Lock]] · [[Agent-Friendly Codebase]] · [[Requirements Gap]] · [[Toil]] · [[Role-Based Access Control]] · [[Audit Trail]]

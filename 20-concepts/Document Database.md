@@ -2,9 +2,11 @@
 type: concept
 tags: [concept, databases, mongodb]
 created: 2026-10-29
+aliases: [Document Model, Document Store]
+source: "Common industry term (e.g. MongoDB, Couchbase)"
 ---
 
-# Document Model
+# Document Database
 
 > [!todo] Drafted by Claude: generic definition. Rewrite in your own words.
 
@@ -21,7 +23,7 @@ Storing data as self-contained JSON-like documents with nested fields and arrays
 - Heavy cross-entity queries, joins or full-text search.
 
 ## Links
-- [[Secondary Search Index]]
+- [[Polyglot Persistence]]
 
 ## Applied in
 - [[LMS Platform]]: helped with nested field data, but search and index performance were poor.

@@ -2,6 +2,8 @@
 type: concept
 tags: [concept, security, authorization]
 created: 2026-10-29
+aliases: [RBAC]
+source: "NIST RBAC model"
 ---
 
 # Role-Based Access Control
@@ -24,4 +26,4 @@ Granting permissions to roles (e.g. operator, student) instead of to individual 
 - [[Audit Trail]]
 
 ## Applied in
-- [[Checkpoint Exam Restart - Missed Use Case]]: only the class's operator can restart a checkpoint.
+- [[Checkpoint Exam Restart]]: only the class's operator can restart a checkpoint.

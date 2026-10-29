@@ -2,6 +2,8 @@
 type: concept
 tags: [concept, ai-agents, developer-experience, architecture]
 created: 2026-10-29
+aliases: [AI-Ready Codebase]
+coined: true
 ---
 
 # Agent-Friendly Codebase
@@ -22,7 +24,7 @@ A codebase structured so that AI coding agents can find their way around, make c
 - TODO(ask)
 
 ## Links
-- [[Hexagonal Architecture]] · [[Unit Testing]]
+- [[Context Engineering]] (broader: everything fed into an LLM's context) · [[Hexagonal Architecture]] · [[Unit Testing]]
 
 ## Applied in
 - [[LMS Platform]]: see [[Preparing a Codebase for AI Coding Agents]].
