@@ -25,4 +25,5 @@ TODO(ask)
 - TODO(ask)
 
 ## Linked concepts
-- TODO(ask): candidates are [[Product Ownership]] and [[Observability]]. · [[Cognitive Load]]
+- [[Cognitive Load]]
+- TODO(ask): other candidates are [[Product Ownership]] and [[Observability]].
