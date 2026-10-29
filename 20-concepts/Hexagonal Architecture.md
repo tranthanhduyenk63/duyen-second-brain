@@ -26,6 +26,7 @@ Also called Ports and Adapters. Business logic sits at the centre and depends on
 
 ## Links
 - Contrast with a framework-centric layered structure, where business logic imports the ORM directly.
+- [[Domain-Driven Design]] · [[Incremental Migration]] · [[Use-Case-Driven Testing]]
 
 ## Applied in
 - [[LMS Platform]]: restructured the NestJS services to this pattern. See [[Preparing a Codebase for AI Coding Agents]].

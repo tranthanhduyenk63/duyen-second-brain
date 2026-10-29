@@ -28,6 +28,10 @@ A learning management system used by an internal operations team. I took full ow
 - **Database:** MongoDB, inherited. The [[Document Database]] fits nested data well, but search and index performance were poor, so search moved to OpenSearch ([[Polyglot Persistence]]).
 - **Redis:** [[Caching]], [[Rate Limiting]] and [[Distributed Lock]]s.
 - **Infrastructure:** Kubernetes, with CI/CD pipelines in Azure (TODO(ask): Azure DevOps Pipelines? AKS?).
+- **Releases:** small and every day ([[Continuous Delivery]]).
+
+## Before this
+- See [[LMS Initial Build]], an LMS built by a team I was a developer on. TODO(ask): same system or a separate one?
 
 ## State when I inherited it
 - Functionally fairly stable.
@@ -35,8 +39,8 @@ A learning management system used by an internal operations team. I took full ow
 - Several intermittent bugs. The previous team fixed their effects by hand with one-off scripts instead of fixing the root cause.
 
 ## Key decisions
-- Restructure services to follow [[Hexagonal Architecture]].
-- Add API navigation for LLMs (TODO(ask): what this is, e.g. an API index or docs that agents read).
+- Restructure services to follow [[Hexagonal Architecture]], one service at a time ([[Incremental Migration]]).
+- Add an endpoint that serves the specs of the APIs LMS provides, for LLMs to read ([[Machine-Readable API Spec]]).
 - Add unit tests.
 - Refactor the CI pipelines.
 - Remove legacy code.
@@ -45,6 +49,7 @@ A learning management system used by an internal operations team. I took full ow
 ## Problems I hit
 - Intermittent bugs that had been "fixed" with manual scripts. Several turned out to be [[Requirements Gap]]s, not defects. For example, checkpoint exam restarts (see [[Checkpoint Exam Restart]]) and rescheduling classes for holidays.
 - Poor MongoDB search and index performance.
+- Legacy code saved data twice, into two data sources ([[Dual Write Problem]]).
 - Customer support tickets about login, enrollment requests and data export. Many of these became bug fixes or features. See [[Owning a Product End-to-End]].
 - Context switching between roles.
 
@@ -52,4 +57,4 @@ A learning management system used by an internal operations team. I took full ow
 - TODO(ask)
 
 ## Linked concepts
-- [[Microservices Architecture]] · [[Hexagonal Architecture]] · [[Command Message]] and [[Event Message]] · [[Event-Carried State Transfer]] · [[Document Database]] · [[Polyglot Persistence]] · [[Caching]] · [[Rate Limiting]] · [[Distributed Lock]] · [[Agent-Friendly Codebase]] · [[Requirements Gap]] · [[Toil]] · [[Role-Based Access Control]] · [[Audit Trail]]
+- [[Microservices Architecture]] · [[Hexagonal Architecture]] · [[Command Message]] and [[Event Message]] · [[Event-Carried State Transfer]] · [[Document Database]] · [[Polyglot Persistence]] · [[Caching]] · [[Rate Limiting]] · [[Distributed Lock]] · [[Agent-Friendly Codebase]] · [[Dual Write Problem]] · [[Machine-Readable API Spec]] · [[Incremental Migration]] · [[Continuous Delivery]] · [[Requirements Gap]] · [[Toil]] · [[Role-Based Access Control]] · [[Audit Trail]]
