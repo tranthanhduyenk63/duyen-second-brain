@@ -40,4 +40,4 @@ The old codebase was hard for agents and for people:
   - Even partial test coverage (~10% of use cases) gives agents a feedback loop.
 
 ## Linked concepts
-- [[Agent-Friendly Codebase]] · [[Hexagonal Architecture]] · [[Incremental Migration]] · [[Dual Write Problem]] · [[Machine-Readable API Spec]] · [[Use-Case-Driven Testing]]
+- [[Agent-Friendly Codebase]] · [[Hexagonal Architecture]] · [[Incremental Migration]] · [[Dual Write Problem]] · [[Machine-Readable API Spec]] · [[Use-Case-Driven Testing]] · [[Cognitive Load]]

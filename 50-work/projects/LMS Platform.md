@@ -48,10 +48,11 @@ A learning management system used by an internal operations team. I took full ow
 
 ## Problems I hit
 - Intermittent bugs that had been "fixed" with manual scripts. Several turned out to be [[Requirements Gap]]s, not defects. For example, checkpoint exam restarts (see [[Checkpoint Exam Restart]]) and rescheduling classes for holidays.
+- Incidents: [[Attendance Records Lost on Holiday Reschedule]] and [[Kafka Outage Took Down Authentication]].
 - Poor MongoDB search and index performance.
 - Legacy code saved data twice, into two data sources ([[Dual Write Problem]]).
 - Customer support tickets about login, enrollment requests and data export. Many of these became bug fixes or features. See [[Owning a Product End-to-End]].
-- Context switching between roles.
+- Context switching between roles ([[Cognitive Load]]).
 
 ## What I'd do differently
 - TODO(ask)
