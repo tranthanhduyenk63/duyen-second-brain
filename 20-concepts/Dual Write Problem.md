@@ -28,3 +28,4 @@ Application code writes the same change to two separate systems (two databases, 
 
 ## Applied in
 - [[LMS Platform]]: the legacy code saved data twice into two data sources. TODO(ask): which stores, and how did you fix it?
+- [[Attendance Records Lost on Holiday Reschedule]]: the upside. Attendance had also been saved to the legacy database, so the lost records could be restored from there with a script.

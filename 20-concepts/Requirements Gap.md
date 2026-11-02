@@ -28,4 +28,4 @@ A real-world situation the system was never designed for. When it happens, the s
 
 ## Applied in
 - [[Checkpoint Exam Restart]]: the script reset checkpoint records 3–4 times a month; replaced by an operator restart feature.
-- [[LMS Platform]]: a script to reschedule classes for holidays was another one. TODO(ask): was it replaced with a feature? Add more examples as you remember them.
+- [[LMS Platform]]: a script to reschedule classes for holidays was another one. It was turned into a feature, but reusing the script's logic caused [[Attendance Records Lost on Holiday Reschedule]]. Add more examples as you remember them.
